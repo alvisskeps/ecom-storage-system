@@ -3,10 +3,16 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Laravel</title>
+        <script src="{{ asset('js/app.js') }}" defer></script>
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <title>{{ env('APP_NAME') }}</title>
     </head>
-    <body>
 
+    <body class="d-flex flex-column min-vh-100">
+        <div class="wrapper flex-grow-1" id="app">
+            <main>
+                <product-list/>
+            </main>
+        </div>
     </body>
 </html>

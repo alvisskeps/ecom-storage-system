@@ -33,7 +33,7 @@ class ProductsController extends Controller
             return response($product, 200);
         } else {
             return response()->json([
-                "message" => "product not found"
+                'message' => 'product not found'
             ], 404);
         }
     }
@@ -51,7 +51,7 @@ class ProductsController extends Controller
         $product->save();
 
         return response()->json([
-            "message" => "product record created"
+            'message' => 'Product record created'
         ], 201);
     }
 
@@ -71,11 +71,11 @@ class ProductsController extends Controller
             $product->save();
 
             return response()->json([
-                "message" => "records updated successfully"
+                'message' => 'Product updated successfully'
             ], 200);
         } else {
             return response()->json([
-                "message" => "product not found"
+                'message' => 'Product not found'
             ], 404);
         }
     }
@@ -90,11 +90,11 @@ class ProductsController extends Controller
             $product->delete();
 
             return response()->json([
-                "message" => "records deleted"
+                'message' => 'Product has been deleted'
             ], 202);
         } else {
             return response()->json([
-                "message" => "product not found"
+                'message' => 'Product not found'
             ], 404);
         }
     }
