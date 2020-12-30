@@ -99,6 +99,10 @@ class ProductsController extends Controller
         }
     }
 
+    /**
+     * @param int $id
+     * @return Application|ResponseFactory|JsonResponse|Response
+     */
     public function getProductAmount(int $id)
     {
         if (Product::where('id', $id)->exists()) {
