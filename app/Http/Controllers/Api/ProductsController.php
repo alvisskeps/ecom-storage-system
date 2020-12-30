@@ -108,7 +108,9 @@ class ProductsController extends Controller
         if (Product::where('id', $id)->exists()) {
             $amount = Product::where('id', $id)->value('amount');
 
-            return response($amount, 200);
+            return response()->json([
+                'amount' => $amount
+            ], 200);
         } else {
             return response()->json([
                 'message' => 'product not found'
