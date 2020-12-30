@@ -98,4 +98,17 @@ class ProductsController extends Controller
             ], 404);
         }
     }
+
+    public function getProductAmount(int $id)
+    {
+        if (Product::where('id', $id)->exists()) {
+            $amount = Product::where('id', $id)->value('amount');
+
+            return response($amount, 200);
+        } else {
+            return response()->json([
+                'message' => 'product not found'
+            ], 404);
+        }
+    }
 }
